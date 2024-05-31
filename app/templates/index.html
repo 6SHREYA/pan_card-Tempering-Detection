@@ -7,67 +7,102 @@
 
   <!-- CSS  -->
   <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  <style>
+    /* Custom Styles */
+    body {
+      background-color: #f5f5f5; /* Light Grey */
+    }
+
+    nav {
+      background-color: #40ccdf; /* Indigo */
+      height: 100px;
+    }
+
+    nav a.brand-logo {
+      color: #350af8; /* White */
+    }
+
+    nav a.brand-logo h5 {
+      margin-top: 0;
+      font-weight: 500;
+    }
+
+    nav .orange-text {
+      color: #3cce43; /* Orange */
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    button.btn-large {
+      background-color: #19b2ee !important; /* Indigo */
+    }
+
+    .file-field .btn {
+      background-color: #19b2ee !important; /* Indigo */
+    }
+
+    .file-field input[type=file] {
+      color: transparent;
+    }
+
+    .file-field input[type=text] {
+      color: #000000; /* Black */
+    }
+  </style>
 </head>
 
 <body>
-  <nav style="background-color: #5e72e4" class="lighten-1"  role="navigation" style="height: 100px">
+  <nav class="lighten-1" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" class="brand-logo center"><h5>Pan Card Tampering</h5></a>
+      <a id="logo-container" class="brand-logo center"><h5>IS PAN CARD TAMPERED OR NOT CHECK..</h5></a>
       <div style="margin-left: 800px">
-      	   Made by <a class="orange-text text-lighten-3">SHREYA</a>
+        Made by <a class="orange-text text-lighten-3">SHREYA</a>
       </div>
     </div>
   </nav>
-
 
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <div class="row">
         <form action='/' method="post" class="col s12" enctype="multipart/form-data">
           <div class="row">
-          	<div class="input-field col s3">
-            </div>
-
-            <div class="input-field col s5" style="margin-left: 20px; margin-top: 100px">
-              <div class = "row">
-                  <label for="first_name"><b>Upload Pan Card Image</b></label><br>
-                  <div class = "file-field input-field">
-                    <div class = "btn" style="background-color: #5e72e4">
-                      <span>Browse</span>
-                      <input type = "file" name="file_upload" id="file_upload" />
-                    </div>
-                    <div class = "file-path-wrapper">
-                      <input class = "file-path validate" type = "text" placeholder = "Upload file" name="file_name" id="file_name" />
-                    </div>
-                  </div>
+            <div class="input-field col s5 offset-s3" style="margin-top: 100px">
+              <label for="first_name"><b>Upload Pan Card Image</b></label><br>
+              <div class="file-field input-field">
+                <div class="btn" style="background-color: #5e72e4">
+                  <span>Browse</span>
+                  <input type="file" name="file_upload" id="file_upload" />
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" placeholder="Upload file" name="file_name" id="file_name" />
+                </div>
               </div>
             </div>
           </div>
     
           <div class="row center">
-            <button type="submit" class="btn-large" style="background-color: #5e72e4">Check</button>
+            <button type="submit" class="btn-large">Check</button>
           </div>
         </form>
-       	<div style="text-align: center; padding-top: 50px">
-      		<h5>{{pred}}</h5>
-     	</div>
-
+        <div style="text-align: center; padding-top: 50px">
+          <h5>{{pred}}</h5>
+        </div>
       </div>
-      <br><br>
     </div>
-  </div>
-
-  </div>
   </div>
 
   <!--  Scripts-->
   <script src="./static/js/materialize.js"></script>
   <script type="text/javascript">
     document.getElementById('file_upload').onchange = function () {
-      	document.getElementById('file_name').value = this.value.slice(12,100);
+      document.getElementById('file_name').value = this.value.slice(12, 100);
     };
   </script>
 
-  </body>
+</body>
 </html>
+
 
